@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/17 10:32:16 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/17 10:39:00 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = fillit
@@ -54,3 +54,5 @@ fclean: clean
 			make fclean -C ./src/libft/
 
 re: fclean all
+
+.PHONY : all, re, clean, flcean
