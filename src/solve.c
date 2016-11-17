@@ -6,11 +6,11 @@
 /*   By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/18 15:09:48 by alcollin          #+#    #+#             */
-/*   Updated: 2016/06/27 09:51:03 by alcollin         ###   ########.fr       */
+/*   Updated: 2016/11/17 10:24:50 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../include/fillit.h"
 
 /*
 ** Test si la position est ok et que ça sort pas ou que ça touche pas une autre piece

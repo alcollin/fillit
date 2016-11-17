@@ -6,11 +6,11 @@
 /*   By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/18 15:09:50 by alcollin          #+#    #+#             */
-/*   Updated: 2016/06/23 18:01:22 by alcollin         ###   ########.fr       */
+/*   Updated: 2016/11/17 10:23:14 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../include/fillit.h"
 
 /*
 ** Met le tetriminos en haut de la grille

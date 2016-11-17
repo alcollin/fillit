@@ -3,59 +3,53 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+         #
+#    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/11/24 11:53:00 by alcollin          #+#    #+#              #
-#    Updated: 2016/06/24 13:31:46 by alcollin         ###   ########.fr        #
+#    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
+#    Updated: 2016/11/17 10:22:30 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 NAME = fillit
 
-SRC_PATH = ./src/
-SRC_NAME = 	main.c\
-			arrange.c \
-			check.c \
-			shape.c \
-			read.c \
-			tetriminos.c \
-			solve.c
+SRC = main.c\
+	  arrange.c\
+	  check.c\
+	  read.c\
+	  shape.c\
+	  solve.c\
+	  tetriminos.c
 
-OBJ_PATH = ./obj/
-OBJ_NAME = $(SRC_NAME:.c=.o)
+OBJ = $(SRC:.c=.o)
 
-INC_PATH = ./include/
+SRC_PATH = src/
 
-LIB = libft.a
+SRC_POS = $(addprefix $(SRC_PATH),$(SRC))
+
+INC = -I includes
+
+LIBFT =	src/libft/libft.a
 
 CC = gcc
-CFLAGS = -Werror -Wall -Wextra
 
-SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
-OBJ = $(addprefix $(OBJ_PATH),$(OBJ_NAME))
-INC = $(addprefix -I,$(INC_PATH))
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(INC) -o $(NAME) $(LIB) $(OBJ)
+$(NAME): $(LIBFT) $(OBJ)
+		$(CC) $(FLAGS) $(OBJ) -o $(NAME) $(LIBFT)
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	@mkdir $(OBJ_PATH) 2> /dev/null || echo "" > /dev/null
-	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+$(OBJ): $(LIBFT)
+		$(CC) $(FLAGS) -c $(SRC_POS)
+
+$(LIBFT):
+		make -C ./src/libft/
 
 clean:
-	rm -fv $(OBJ)
-	@rmdir $(OBJ_PATH) 2> /dev/null || echo "" > /dev/null
+		rm -f $(OBJ)
+			make clean -C ./src/libft/
 
 fclean: clean
-	rm -fv $(NAME)
+		rm -f $(NAME)
+			make fclean -C ./src/libft/
 
 re: fclean all
-
-norme:
-	norminette $(SRC)
-	norminette $(INC_PATH)fillit.h
-
-.PHONY: all clean fclean re norme
-	

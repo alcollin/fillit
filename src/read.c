@@ -6,11 +6,11 @@
 /*   By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/18 15:09:49 by alcollin          #+#    #+#             */
-/*   Updated: 2016/06/23 18:25:28 by alcollin         ###   ########.fr       */
+/*   Updated: 2016/11/17 10:24:22 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "../include/fillit.h"
 
 /*
 ** Remplit un char* pour creer une liste de tetriminos
