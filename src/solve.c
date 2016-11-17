@@ -6,14 +6,15 @@
 /*   By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/18 15:09:48 by alcollin          #+#    #+#             */
-/*   Updated: 2016/11/17 10:24:50 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/17 10:36:46 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fillit.h"
 
 /*
-** Test si la position est ok et que ça sort pas ou que ça touche pas une autre piece
+** Test si la position est ok
+** et que ça sort pas ou que ça touche pas une autre piece
 */
 
 static int		test_pos(t_tetrimino *start, char **tab, int square_size)
@@ -127,7 +128,7 @@ int				place(t_tetrimino *start, int square_size, char **tab)
 
 /*
 ** Solve fillit et retourne la solution (char **)
-** Square_size est la taille du tableau 
+** Square_size est la taille du tableau
 ** Return tab_solved
 */
 

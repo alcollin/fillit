@@ -6,7 +6,7 @@
 #    By: jlasne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 12:34:13 by jlasne            #+#    #+#              #
-#    Updated: 2016/11/17 10:22:30 by jlasne           ###   ########.fr        #
+#    Updated: 2016/11/17 10:32:16 by jlasne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = fillit
@@ -17,7 +17,8 @@ SRC = main.c\
 	  read.c\
 	  shape.c\
 	  solve.c\
-	  tetriminos.c
+	  tetriminos.c\
+	  usage.c
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/23 18:15:29 by alcollin          #+#    #+#             */
-/*   Updated: 2016/11/17 10:24:01 by jlasne           ###   ########.fr       */
+/*   Updated: 2016/11/17 10:33:32 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int			main(int argc, char **argv)
 	tab = NULL;
 	if (argc != 2)
 	{
-		ft_putendl("error");
+		ft_usage();
 		return (-1);
 	}
 	if ((tab = read_stdin(argv[1])) == NULL)

@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   usage.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlasne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 10:29:07 by jlasne            #+#    #+#             */
-/*   Updated: 2016/11/17 10:29:14 by jlasne           ###   ########.fr       */
+/*   Created: 2016/11/17 10:31:08 by jlasne            #+#    #+#             */
+/*   Updated: 2016/11/17 10:36:12 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sqrt(int nb)
-{
-	int i;
+#include "../include/fillit.h"
 
-	i = 1;
-	if (nb <= 0)
-		return (0);
-	while (i <= 46342)
-	{
-		if ((i * i) == nb)
-			return (i);
-		i++;
-	}
-	return (0);
+void	ft_usage(void)
+{
+	ft_putendl("usage: ./fillit [File containing between 2 and 12 Tetriminos]");
+	ft_putendl("        Note : If file contains more than 12 Tetriminos,");
+	ft_putendl("               The program will run slowly.");
 }

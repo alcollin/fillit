@@ -6,7 +6,7 @@
 /*   By: alcollin <alcollin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/23 17:35:01 by alcollin          #+#    #+#             */
-/*   Updated: 2016/06/23 18:26:33 by alcollin         ###   ########.fr       */
+/*   Updated: 2016/11/17 10:35:06 by jlasne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 
-# include "libft.h"
+# include "../src/libft/libft.h"
 
 int g_nb_tetrimino;
 # define BUFF_SIZE 4096
@@ -52,5 +52,6 @@ int						is_alone(char *s);
 int						check_void_int(char *s);
 int						first_test(char *buf);
 int						ft_sqrt(int nb);
+void					ft_usage(void);
 
 #endif
